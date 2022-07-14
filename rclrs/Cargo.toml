@@ -1,0 +1,32 @@
+[package]
+name = "rclrs"
+version = "0.2.0"
+# This project is not military-sponsored, Jacob's employment contract just requires him to use this email address
+authors = ["Esteve Fernandez <esteve@apache.org>", "Nikolai Morin <nnmmgit@gmail.com>", "Jacob Hassold <jacob.a.hassold.civ@army.mil>"]
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+
+# Please keep the list of dependencies alphabetically sorted,
+# and also state why each dependency is needed.
+[dependencies]
+# Needed for FFI
+libc = "0.2.43"
+# Provides better concurrency primitives than std
+parking_lot = "0.11.2"
+# Needed for the Message trait, among others
+rosidl_runtime_rs = "*"
+# Needed for clients
+futures = "0.3"
+
+[dev-dependencies]
+# Needed for e.g. writing yaml files in tests
+tempfile = "3.3.0"
+
+[dev-dependencies.std_msgs]
+version = "*"
+
+[build-dependencies]
+# Needed for FFI
+bindgen = "0.59.1"

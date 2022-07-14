@@ -1,0 +1,7 @@
+<launch>
+
+  <node pkg="campub" exec="camera_publisher" name="campub_camera_publisher" output="screen" />
+  <node pkg="auto_focus" exec="camera_focus" name="auto_focus_camera_focus" output="screen" />
+  <node pkg="controller" exec="camera_zoom_service" name="controller_camera_zoom_service" output="screen" />
+
+</launch>
